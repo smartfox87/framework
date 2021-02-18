@@ -1,0 +1,16 @@
+.international-phone .iti__selected-flag {
+  outline: none;
+}
+.international-phone .iti__country-list {
+  width: 300px;
+  overflow-y: auto;
+}
+
+.international-phone__input {
+  width: 300px;
+  padding: 10px 15px;
+}
+.international-phone__input::placeholder {
+  color: #000000;
+  opacity: 0.3;
+}

@@ -1,0 +1,7 @@
+.toggle-class.active-custom, .toggle-class.active-class {
+  background-color: red;
+}
+
+.toggle-class__toggler {
+  cursor: pointer;
+}

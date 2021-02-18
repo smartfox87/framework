@@ -1,0 +1,89 @@
+h1 form validate
+form.form(action='/' method='post' data-parsley-validate='' novalidate='')
+    .form__fields
+        .form__fields-grid
+            .form__fields-cell.form__fields-cell--50
+                label.field.js-field
+                    span.field__label
+                        | ФИО получателя
+                        span.c-error *
+                    input.field__input.input.input--mid.input--border(type='text' required='')
+            .form__fields-cell.form__fields-cell--50
+                label.field.js-field
+                    span.field__label
+                        | Email
+                        span.c-error *
+                    input.field__input.input.input--mid.input--border(type='email' required='')
+            .form__fields-cell.form__fields-cell--50
+                label.field.js-field
+                    span.field__label
+                        | Мобильный телефон
+                        span.c-error *
+                    input.field__input.input.input--mid.input--border.js-input-mask(type='text' placeholder='+375 (__) ___-__-__' data-mask='+375 (99) 999-99-99' required='')
+            .form__fields-cell.form__fields-cell--100
+                label.checkbox.checkbox--light
+                    input.checkbox__input(type='checkbox' name='subscribe' data-parsley-multiple='subscribe')
+                    i.checkbox__icon
+                    span.checkbox__text Подписаться на рассылку
+            .form__fields-cell.form__fields-cell--50
+                label.field.js-field
+                    span.field__label
+                        | Регион
+                        span.c-error *
+                    .select.select--border.select--w-icon.js-select
+                        .select__wrapper
+                            svg.select__icon.symbol.symbol-location-fill
+                                use(xlink:href='img/sprite/sprite.svg#location-fill')
+                            .select__current.js-select__toggler
+                                | Выберите регион
+                            .select__content.js-select__content(style='display: none;')
+                                .select__list
+                                    .select__item.js-select__item(data-value='minsk')
+                                        | Минск
+                                    .select__item.js-select__item(data-value='grodno')
+                                        | Гродно
+                        select.select__input.js-select__value(name='location')
+                            option(value='')
+                            option(value='')
+                            option(value='')
+                            option(value='')
+            .form__fields-cell.form__fields-cell--25
+                label.field.js-field
+                    span.field__label
+                        | Улица
+                        span.c-error *
+                    input.field__input.input.input--mid.input--border(type='text' required='')
+            .form__fields-cell.form__fields-cell--12
+                label.field.js-field
+                    span.field__label
+                        | Дом/корпус
+                        span.c-error *
+                    input.field__input.input.input--mid.input--border(type='text' required='')
+            .form__fields-cell.form__fields-cell--12
+                label.field.js-field
+                    span.field__label Кв/офис
+                    input.field__input.input.input--mid.input--border(type='text')
+            .form__fields-cell.form__fields-cell--50
+                label.field.js-field
+                    span.field__label Время доставки
+                    .select.select--border.js-select
+                        .select__wrapper
+                            .select__current.js-select__toggler
+                                | Выберите время
+                            .select__content.js-select__content(style='display: none;')
+                                .select__list
+                                    .select__item.js-select__item(data-value='8')
+                                        | 8.00-10.00
+                                    .select__item.js-select__item(data-value='10')
+                                        | 10.00-12.00
+                        select.select__input.js-select__value(name='location')
+                            option(value='')
+                            option(value='')
+                            option(value='')
+                            option(value='')
+            .form__fields-cell.form__fields-cell--100
+                label.field.js-field
+                    span.field__label Комментарии к заказу
+                    textarea.field__input.input.input--mid.input--border.input--textarea
+            .form__fields-cell.form__fields-cell--100
+                button.btn.btn--full.btn--lg Оформить заказа

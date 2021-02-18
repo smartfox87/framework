@@ -1,0 +1,19 @@
+.collapsible-menu .open-accordion .collapsible-menu__toggler {
+  display: none;
+}
+
+.collapsible-menu__item {
+  display: block;
+  text-decoration: none;
+}
+.collapsible-menu__item:hover {
+  text-decoration: underline;
+}
+
+.collapsible-menu__toggler {
+  cursor: pointer;
+  transition-duration: 400ms;
+}
+.collapsible-menu__toggler:hover {
+  opacity: 0.8;
+}

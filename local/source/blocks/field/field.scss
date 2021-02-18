@@ -1,0 +1,65 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+
+.field {
+	display: flex;
+	position: relative;
+	color: #000;
+	font-size: 24px;
+	width: 100%;
+
+	&.show-writer {
+		.field__placeholder {
+			display: block;
+		}
+	}
+
+	.parsley-errors-list {
+		display: block;
+		position: absolute;
+		font-size: 14px;
+		color: $color-red;
+		left: 0;
+		top: 0;
+		line-height: 1;
+	}
+
+	.symbol--icon__phone {
+		transform: translateX(-5px) rotate(-118deg);
+	}
+}
+
+.field__input {
+	color: $color-black;
+	font-size: inherit;
+	height: 64px;
+	box-sizing: border-box;
+	line-height: 50px;
+	padding: 6px 15px;
+	width: 100%;
+	min-width: 100px;
+	background-color: transparent;
+	outline: none;
+	border: 1px solid #000;
+	box-shadow: none;
+
+	&::placeholder {
+		color: #000;
+		opacity: 1;
+	}
+
+	&:focus {
+		background: none;
+	}
+
+	&.parsley-error {
+		border-color: $color-red;
+	}
+}
+
+.field__placeholder {
+	display: none;
+	position: absolute;
+	bottom: 17px;
+	left: 0;
+}

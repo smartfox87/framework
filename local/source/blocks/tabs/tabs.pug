@@ -1,0 +1,28 @@
+h1 tabs
+.tabs.js-tabs
+    .tabs__navigation
+        .tabs__toggle.active-tab.js-tabs__toggle(data-tabs-item='1') toggler 1
+        .tabs__toggle.js-tabs__toggle(data-tabs-item='2') toggler 2
+        .tabs__toggle.js-tabs__toggle(data-tabs-item='3') toggler 3
+        .tabs__toggle.js-tabs__toggle(data-tabs-item='4') toggler 4
+    .tabs__list
+        .tabs__content.active-tab.js-tabs__tab(data-tabs-item='1') content 1
+        .tabs__content.js-tabs__tab(data-tabs-item='2') content 2
+        .tabs__content.js-tabs__tab(data-tabs-item='3')
+            | content 3
+            img.js-lazy(data-src='img/carousel__img--01.jpg' alt='')
+        .tabs__content.js-tabs__tab(data-tabs-item='4') content 4
+h1 tabs native js
+.tabs.js-tabs--native
+    .tabs__navigation
+        .tabs__toggle.js-tabs__toggle(data-tabs-item='1') toggler 1
+        .tabs__toggle.active-tab.js-tabs__toggle(data-tabs-item='2') toggler 2
+        .tabs__toggle.js-tabs__toggle(data-tabs-item='3') toggler 3
+        .tabs__toggle.js-tabs__toggle(data-tabs-item='4') toggler 4
+    .tabs__list
+        .tabs__content.js-tabs__tab(data-tabs-item='1') content 1
+        .tabs__content.active-tab.js-tabs__tab(data-tabs-item='2') content 2
+        .tabs__content.js-tabs__tab(data-tabs-item='3')
+            | content 3
+            img.js-lazy(data-src='img/carousel__img--01.jpg' alt='')
+        .tabs__content.js-tabs__tab(data-tabs-item='4') content 4

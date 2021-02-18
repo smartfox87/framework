@@ -1,0 +1,30 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        meta(http-equiv='X-UA-Compatible' content='ie=edge')
+        title static
+        link(rel='stylesheet' href='css/style.css')
+        //if IE
+          style(type='text/css').
+            body {
+            background-color: red !important;
+            }
+    body
+        .main-container
+            include ../blocks/btn/btn
+        .main-container
+            include ../blocks/icon-close/icon-close
+        .main-container
+            include ../blocks/features/features
+        .main-container
+            include ../blocks/progress/progress
+        .main-container
+            include ../blocks/props/props
+        .main-container
+            include ../blocks/social/social
+        .main-container
+            include ../blocks/pagination/pagination
+        .main-container
+            include ../blocks/radio-toggle/radio-toggle

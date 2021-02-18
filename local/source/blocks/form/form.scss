@@ -1,0 +1,159 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+
+.form {
+
+}
+
+.form__fields-grid {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -10px -12px -11px;
+}
+
+.form__fields-cell {
+	padding: 10px 12px 11px;
+	box-sizing: border-box;
+
+	.checkbox {
+		padding: 0;
+		font-size: 14px;
+		margin-top: 8px;
+	}
+}
+
+.form__fields-cell--100 {
+	width: 100%;
+}
+
+.form__fields-cell--50 {
+	width: 50%;
+}
+
+.form__fields-cell--25 {
+	width: 25%;
+}
+
+.form__fields-cell--12 {
+	width: 12.5%;
+
+	.field__label {
+		white-space: nowrap;
+	}
+}
+
+.field {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	background: none;
+
+	&:active,
+	&:focus,
+	&:hover {
+		background: none;
+	}
+
+	&.field--error {
+		.field__label {
+			color: red;
+		}
+
+		.select__current {
+			border-color: red;
+		}
+	}
+
+	.parsley-errors-list {
+		display: block;
+		font-size: 12px;
+		color: red;
+		line-height: 1.3;
+		margin-top: 7px;
+	}
+
+	.symbol--icon__phone {
+		transform: translateX(-5px) rotate(-118deg);
+	}
+
+	.input-file {
+		width: 100%;
+	}
+}
+
+.field__label {
+	color: #dddddd;
+	margin-bottom: 5px;
+	transition-duration: $anim-duration;
+}
+
+.field__input {
+	font-size: inherit;
+	box-sizing: border-box;
+	width: 100%;
+	min-width: 100px;
+
+	&::placeholder {
+		color: #000;
+		opacity: 1;
+	}
+
+	&:focus {
+		background: none;
+	}
+
+	&.parsley-error {
+		border-color: red;
+	}
+}
+
+.no-touch {
+	.field:hover {
+		.field__label {
+			color: red;
+
+			.c-error {
+				color: inherit;
+			}
+		}
+
+		.select__current,
+		.input {
+			border-color: red;
+			box-shadow: 0 1px 4px rgba(23, 142, 209, 0.2);
+		}
+	}
+}
+
+@media (max-width: $md-max) {
+	.form__fields-cell--50 {
+		width: 100%;
+	}
+	.form__fields-cell--25 {
+		width: 50%;
+	}
+	.form__fields-cell--12 {
+		width: 25%;
+	}
+}
+
+@media (max-width: $xs-mid) {
+	.form__fields-grid {
+		margin: -7px;
+	}
+	.form__fields-cell {
+		padding: 7px;
+	}
+	.form__fields-cell--25 {
+		width: 100%;
+	}
+	.form__fields-cell--12 {
+		width: 50%;
+	}
+
+	.field__label {
+		font-size: 14px;
+		line-height: 1.25;
+	}
+}

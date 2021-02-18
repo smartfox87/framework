@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Document</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="main-container">
+			<div id="app">
+				{{ message }}
+				<vue-slider v-model="rangeVal"></vue-slider>
+			</div>
+		</div>
+		<div class="main-container">
+			@@include("../blocks/flex-menu/flex-menu.html")
+		</div>
+		<div class="main-container">
+			@@include("../blocks/overlay/overlay.html")
+		</div>
+		<div class="main-container">
+			@@include("../blocks/dropdown/dropdown.html")
+		</div>
+		<div class="main-container">
+			@@include("../blocks/animate-scroll/animate-scroll.html")
+		</div>
+		<div class="main-container">
+			@@include("../blocks/toggle-class/toggle-class.html")
+		</div>
+		<div class="main-container">
+			@@include("../blocks/fade-block/fade-block.html")
+		</div>
+		<div class="main-container" style="position: static;">
+			@@include("../blocks/fixed-block/fixed-block.html")
+		</div>
+		<div class="main-container">
+			@@include("../blocks/accordion/accordion.html")
+		</div>
+		<div class="main-container">
+			@@include("../blocks/collapsible-menu/collapsible-menu.html")
+		</div>
+		<div class="main-container">
+			@@include("../blocks/tabs/tabs.html")
+		</div>
+		<div class="main-container">
+			@@include("../blocks/clipped-text/clipped-text.html")
+		</div>
+		<div class="main-container">
+			@@include("../blocks/scroll-top/scroll-top.html")
+		</div>
+		<div class="main-container">
+			@@include("../blocks/hover-menu/hover-menu.html")
+		</div>
+		<div class="main-container">
+			@@include("../blocks/tooltip/tooltip.html")
+		</div>
+		<div class="main-container">
+			@@include("../blocks/sortable-blocks/sortable-blocks.html")
+		</div>
+		<div class="main-container">
+			@@include("../blocks/custom-table/custom-table.html")
+		</div>
+		<div class="main-container">
+			@@include("../blocks/ajax-load/ajax-load.html")
+		</div>
+
+
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<link ref="stylesheet" src="./node_modules/vue-slider-component/theme/default.css">
+		<script src="./node_modules/vue-slider-component/dist/vue-slider-component.umd.min.js"></script>
+		<script>
+			window.addEventListener('load', function () {
+				var app = new Vue({
+					el: '#app',
+					data: {
+						message: 'Привет, Vue!',
+						rangeVal: 60
+					},
+					components: {
+						VueSlider: window['vue-slider-component']
+					}
+				})
+			})
+		</script>
+	</body>
+</html>

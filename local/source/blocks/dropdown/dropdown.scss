@@ -1,0 +1,62 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+
+.dropdown {
+	position: relative;
+	
+	&.open-dropdown {
+		.dropdown__toggler {
+			.dropdown__icon {
+				transform: rotate(225deg);
+				transform-origin: 50% 65%;
+			}
+		}
+		
+		.dropdown__content {
+			opacity: 1;
+		}
+	}
+}
+
+.dropdown__toggler {
+	display: flex;
+	align-items: center;
+	padding: 5px 10px;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 1;
+	letter-spacing: 0.05em;
+	cursor: pointer;
+}
+
+.dropdown__icon {
+	width: 5px;
+	height: 5px;
+	margin-top: -2px;
+	margin-right: 8px;
+	border-right: 2px solid #2a2a2a;
+	border-bottom: 2px solid #2a2a2a;
+	transition-duration: 400ms;
+	transform: rotate(45deg);
+}
+
+.dropdown__content {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 2;
+	box-sizing: border-box;
+	min-width: 100%;
+	padding: 10px;
+	background-color: #ffffff;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown--hover {
+	width: 200px;
+	margin-left: auto;
+	.dropdown__content {
+		width: 400px;
+	}
+}

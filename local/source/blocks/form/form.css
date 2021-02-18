@@ -1,0 +1,135 @@
+.form__fields-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px -12px -11px;
+}
+
+.form__fields-cell {
+  padding: 10px 12px 11px;
+  box-sizing: border-box;
+}
+.form__fields-cell .checkbox {
+  padding: 0;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.form__fields-cell--100 {
+  width: 100%;
+}
+
+.form__fields-cell--50 {
+  width: 50%;
+}
+
+.form__fields-cell--25 {
+  width: 25%;
+}
+
+.form__fields-cell--12 {
+  width: 12.5%;
+}
+.form__fields-cell--12 .field__label {
+  white-space: nowrap;
+}
+
+.field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: none;
+}
+.field:active, .field:focus, .field:hover {
+  background: none;
+}
+.field.field--error .field__label {
+  color: red;
+}
+.field.field--error .select__current {
+  border-color: red;
+}
+.field .parsley-errors-list {
+  display: block;
+  font-size: 12px;
+  color: red;
+  line-height: 1.3;
+  margin-top: 7px;
+}
+.field .symbol--icon__phone {
+  transform: translateX(-5px) rotate(-118deg);
+}
+.field .input-file {
+  width: 100%;
+}
+
+.field__label {
+  color: #dddddd;
+  margin-bottom: 5px;
+  transition-duration: 300ms;
+}
+
+.field__input {
+  font-size: inherit;
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 100px;
+}
+.field__input::placeholder {
+  color: #000;
+  opacity: 1;
+}
+.field__input:focus {
+  background: none;
+}
+.field__input.parsley-error {
+  border-color: red;
+}
+
+.no-touch .field:hover .field__label {
+  color: red;
+}
+.no-touch .field:hover .field__label .c-error {
+  color: inherit;
+}
+.no-touch .field:hover .select__current,
+.no-touch .field:hover .input {
+  border-color: red;
+  box-shadow: 0 1px 4px rgba(23, 142, 209, 0.2);
+}
+
+@media (max-width: 1366px) {
+  .form__fields-cell--50 {
+    width: 100%;
+  }
+
+  .form__fields-cell--25 {
+    width: 50%;
+  }
+
+  .form__fields-cell--12 {
+    width: 25%;
+  }
+}
+@media (max-width: 550px) {
+  .form__fields-grid {
+    margin: -7px;
+  }
+
+  .form__fields-cell {
+    padding: 7px;
+  }
+
+  .form__fields-cell--25 {
+    width: 100%;
+  }
+
+  .form__fields-cell--12 {
+    width: 50%;
+  }
+
+  .field__label {
+    font-size: 14px;
+    line-height: 1.25;
+  }
+}

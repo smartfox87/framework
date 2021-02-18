@@ -1,0 +1,20 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+
+.custom-table {
+    font-size: 18px;
+    line-height: 1.66;
+    display: flex;
+}
+
+.custom-table__column {
+    &:first-child {
+        width: 20%;
+    }
+}
+
+.custom-table__cell {
+    padding: 10px 20px;
+    border-bottom: 1px solid #d8d8d8;
+    box-sizing: border-box;
+}

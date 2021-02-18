@@ -1,0 +1,38 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+
+.upload-files {
+  
+}
+
+.upload-files__row {
+  &.selected-file {
+    .upload-files__name {
+      display: flex;
+    }
+  }
+}
+
+.upload-files__label {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  border: 1px solid #dddddd;
+}
+
+.upload-files__input {
+  display: none;
+}
+
+.upload-files__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.upload-files__name {
+  display: none;
+  align-items: center;
+  padding: 5px 10px;
+}

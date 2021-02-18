@@ -1,0 +1,239 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+
+.banner-menu {
+  font-family: Roboto, sans-serif;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner-menu__wrapper {
+  display: flex;
+}
+
+.banner-menu__item {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  width: 50%;
+  overflow: hidden;
+  &:nth-child(odd) {
+    .banner-menu__wrap {
+      margin-left: auto;
+      padding-left: 24px;
+    }
+  }
+  &:nth-child(even) {
+    .banner-menu__wrap {
+      margin-right: auto;
+      padding-right: 24px;
+    }
+  }
+  &.second-level {
+    .banner-menu__back {
+      display: flex;
+    }
+  }
+  &:hover {
+    .banner-menu__header {
+      transform: translateY(-10px);
+    }
+    .banner-menu__bg {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.banner-menu__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  transition-duration: 800ms;
+  &.active-bg {
+    opacity: 1;
+  }
+}
+
+.banner-menu__wrap {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  max-width: 696px;
+  min-height: 500px;
+  padding: 50px 8%;
+}
+
+.banner-menu__header {
+  display: flex;
+  align-items: flex-start;
+  min-height: 140px;
+  transition-duration: 300ms;
+  transform: translateY(0);
+}
+
+.banner-menu__title {
+  max-width: 400px;
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.banner-menu__back {
+  display: none;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition-duration: 300ms;
+  &:hover {
+    opacity: 0.7;
+  }
+  &::after {
+    content: '';
+    display: block;
+    box-sizing: border-box;
+    width: 17px;
+    height: 17px;
+    margin-left: 4px;
+    border-top: 3px solid #ffffff;
+    border-right: 3px solid #ffffff;
+    transform: rotate(-135deg);
+  }
+}
+
+.banner-menu__buttons {
+  display: none;
+  flex-wrap: wrap;
+  margin-bottom: -22px;
+  &.active {
+    display: flex;
+  }
+}
+
+.banner-menu__btn {
+  margin-right: 22px;
+  margin-bottom: 22px;
+  padding: 11px 25px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition-duration: 300ms;
+  &:hover {
+    color: #ffffff;
+    background-color: rgba(242, 151, 37, 0.7);
+  }
+}
+
+.banner-menu__btn--orange {
+  color: #ffffff;
+  background-color: rgba(242, 151, 37, 1);
+  &:hover {
+    color: #ffffff;
+    background-color: rgba(242, 151, 37, 0.7);
+  }
+}
+
+.banner-menu__btn--parent {
+  position: relative;
+  display: flex;
+  align-items: center;
+  &::after {
+    content: '';
+    display: block;
+    box-sizing: border-box;
+    width: 7px;
+    height: 7px;
+    margin-left: 10px;
+    border-top: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    transform: rotate(45deg);
+  }
+}
+
+@media (max-width: $sm-max) {
+  .banner-menu__wrapper {
+    display: block;
+  }
+  .banner-menu__item {
+    width: auto;
+    &:nth-child(odd) {
+      .banner-menu__wrap {
+        margin-left: 0;
+        padding-right: 24px;
+        padding-left: 24px;
+      }
+    }
+    &:nth-child(even) {
+      .banner-menu__wrap {
+        margin-right: 0;
+        padding-right: 24px;
+        padding-left: 24px;
+      }
+    }
+  }
+  .banner-menu__wrap {
+    max-width: none;
+  }
+  .banner-menu__buttons {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: $xs-mid) {
+  .banner-menu__wrap {
+    min-height: 350px;
+    padding: 30px 10px;
+  }
+  .banner-menu__header {
+    min-height: 115px;
+  }
+  .banner-menu__back {
+    width: 27px;
+    height: 27px;
+    margin-top: 5px;
+    &::after {
+      width: 13px;
+      height: 13px;
+      margin-left: 2px;
+    }
+  }
+  .banner-menu__title {
+    max-width: 300px;
+    font-size: 30px;
+  }
+  .banner-menu__buttons {
+    margin-bottom: -12px;
+  }
+  .banner-menu__btn {
+    margin-right: 12px;
+    margin-bottom: 12px;
+    padding: 8px 15px;
+    font-size: 15px;
+  }
+  .banner-menu__btn--parent {
+    &::after {
+      width: 6px;
+      height: 6px;
+    }
+  }
+}

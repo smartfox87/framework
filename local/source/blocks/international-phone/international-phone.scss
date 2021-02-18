@@ -1,0 +1,21 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+
+.international-phone {
+  .iti__selected-flag {
+    outline: none;
+  }
+  .iti__country-list {
+    width: 300px;
+    overflow-y: auto;
+  }
+}
+
+.international-phone__input {
+  width: 300px;
+  padding: 10px 15px;
+  &::placeholder {
+    color: #000000;
+    opacity: 0.3;
+  }
+}

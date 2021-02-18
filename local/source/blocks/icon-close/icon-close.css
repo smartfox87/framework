@@ -1,0 +1,25 @@
+.icon-close {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  outline: 1px solid red;
+  cursor: pointer;
+  transition-duration: 300ms;
+}
+.icon-close::before, .icon-close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: #959595;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.icon-close::after {
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+.icon-close:hover {
+  opacity: 0.7;
+}

@@ -1,0 +1,55 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+
+.fixed-block {
+	position: relative;
+
+	&.init-fixed {
+		.fixed-block__content {
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			z-index: 100;
+			box-sizing: border-box;
+			width: 100%;
+			background-color: #fff;
+			border-bottom: 1px solid transparent;
+		}
+	}
+
+	&.active-fixed {
+		.fixed-block__content {
+			position: fixed;
+			animation: show 800ms;
+		}
+	}
+}
+
+.fixed-block__content {
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 100%;
+		right: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 10px;
+		background: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, 0));
+	}
+}
+
+@keyframes show {
+	0% {
+		opacity: 0;
+		transform: translateY(-100%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

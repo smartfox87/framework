@@ -1,0 +1,133 @@
+h1 select
+.select.js-select
+    .select__wrapper
+        .select__current.js-select__toggler(data-reset='Тип техники')
+            | Тип техники
+        .select__content.js-select__content
+            .select__list
+                .select__item.select__item--reset.js-select__item(data-value='reset')
+                    | Сброс
+                .select__item.js-select__item(data-value='var1')
+                    | Вариант 1
+                .select__item.js-select__item(data-value='var2')
+                    | Вариант 2
+                .select__item.js-select__item(data-value='var3')
+                    | Вариант 3
+                .select__item.js-select__item(data-value='var4')
+                    | Вариант 4
+    select.select__input.js-select__value(name='location')
+        option(value='var1') 1
+        option(value='var2') 2
+        option(value='var3') 3
+        option(value='var4') 4
+h1 select disabled
+.select.js-select
+    .select__wrapper
+        .select__current.disabled.js-select__toggler(data-reset='Месторасположение')
+            | Месторасположение
+        .select__content.js-select__content
+            .select__list
+                .select__item.select__item--reset.js-select__item(data-value='reset')
+                    | Сброс
+                .select__item.js-select__item(data-value='minsk')
+                    | Минск
+                .select__item.js-select__item(data-value='brest')
+                    | Брест
+                .select__item.js-select__item(data-value='grodno')
+                    | Гродно
+                .select__item.js-select__item(data-value='vitebsk')
+                    | Витебск
+    select.select__input.js-select__value(name='location')
+        option(value='')
+        option(value='')
+        option(value='')
+        option(value='')
+h1 select hover
+.select.js-select--hover
+    .select__current.js-select__toggler(data-reset='Месторасположение')
+        | Месторасположение
+    .select__content.js-select__content
+        .select__list
+            .select__item.select__item--reset.js-select__item(data-value='reset')
+                | Сброс
+            .select__item.js-select__item(data-value='minsk')
+                | Минск
+            .select__item.js-select__item(data-value='brest')
+                | Брест
+            .select__item.js-select__item(data-value='grodno')
+                | Гродно
+            .select__item.js-select__item(data-value='vitebsk')
+                | Витебск
+    select.select__input.js-select__value(name='location')
+        option(value='')
+        option(value='')
+        option(value='')
+        option(value='')
+h1 select toggle blocks
+.js-select-block
+    .select__wrapper
+        .select.js-select
+            .select__current.js-select__toggler(data-reset='Месторасположение')
+                | Месторасположение
+            .select__content.js-select__content
+                .select__list
+                    .select__item.select__item--reset.js-select__item(data-value='reset')
+                        | Сброс
+                    .select__item.js-select__item(data-value='minsk')
+                        | Минск
+                    .select__item.js-select__item(data-value='brest')
+                        | Брест
+                    .select__item.js-select__item(data-value='grodno')
+                        | Гродно
+                    .select__item.js-select__item(data-value='vitebsk')
+                        | Витебск
+            select.select__input.js-select__value.js-select-block__select(name='location')
+                option(value='minsk') m
+                option(value='brest') b
+                option(value='grodno') g
+                option(value='vitebsk') v
+    .bs-shop-info__desc.flc.js-select-block__item(data-value='minsk') minsk
+    .bs-shop-info__desc.flc.js-select-block__item(data-value='brest') brest
+    .bs-shop-info__desc.flc.js-select-block__item(data-value='grodno') grodno
+    .bs-shop-info__desc.flc.js-select-block__item(data-value='vitebsk') vitebsk
+h1 select with filter
+.select.js-select--filter
+    .select__wrapper
+        .select__current.js-select__toggler(data-reset='Тип техники')
+            | Тип техники
+        .select__search
+            input.js-select__filter(type='text')
+        .select__content.js-select__content
+            .select__list
+                .select__item.select__item--reset.js-select__item(data-value='reset')
+                    | Сброс
+                .select__item.js-select__item(data-value='var1')
+                    | Вариант 1
+                .select__item.js-select__item(data-value='var2')
+                    | Вариант 2
+                .select__item.js-select__item(data-value='var3')
+                    | Вариант 3
+                .select__item.js-select__item(data-value='var4')
+                    | Вариант 4
+    select.select__input.js-select__value(name='location')
+        option(value='var1')
+        option(value='var2')
+        option(value='var3')
+        option(value='var4')
+select.js-select-w-filter
+    optgroup(label='Seven Wonders of the Ancient World')
+        option Great Pyramid of Giza
+        option Hanging Gardens of Babylon
+        option Statue of Zeus at Olympia
+        option Temple of Artemis at Ephesus
+        option Mausoleum at Halicarnassus
+        option Colossus of Rhodes
+        option Lighthouse of Alexandria
+    optgroup(label='Seven Natural Wonders of the World')
+        option Grand Canyon
+        option Great Barrier Reef
+        option Harbor of Rio de Janeiro
+        option Mount Everest
+        option Aurora
+        option Parícutin volcano
+        option Victoria Falls

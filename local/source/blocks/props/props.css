@@ -1,0 +1,50 @@
+.props-block {
+  font-size: 16px;
+  line-height: 1.25;
+  max-width: 535px;
+}
+
+.props-block__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.props-block__row:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.props-block__name {
+  color: #9b9b9b;
+  width: 43.5%;
+  display: flex;
+  align-items: flex-end;
+}
+.props-block__name::after {
+  content: '';
+  display: block;
+  flex-grow: 1;
+  border-top: 1px dashed;
+  margin: 0 4px 0.3em;
+}
+.props-block__name span {
+  flex-shrink: 0;
+  max-width: 90%;
+}
+
+.props-block__value {
+  width: 50%;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+@media (max-width: 550px) {
+  .props-block__name {
+    width: 100%;
+  }
+  .props-block__name::after {
+    display: none;
+  }
+  .props-block__name span {
+    max-width: none;
+  }
+}

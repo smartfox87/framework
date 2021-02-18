@@ -1,0 +1,30 @@
+h1 filter items by toggles
+.filter-items.js-filter-items(data-index='0')
+    .filter-items__navigation
+        .filter-items__toggle.btn.js-filter-items__toggle(data-index='0') 1,2,3
+        .filter-items__toggle.btn.js-filter-items__toggle(data-index='1') 1
+        .filter-items__toggle.btn.js-filter-items__toggle(data-index='2') 2
+        .filter-items__toggle.btn.js-filter-items__toggle(data-index='3') 3
+        .select.js-select
+            .select__wrapper
+                .select__current.js-select__toggler(data-reset='Тип техники')
+                    | Тип техники
+                .select__content.js-select__content
+                    .select__list
+                        .select__item.js-select__item(data-value='0')
+                            | Вариант 1, 2, 3
+                        .select__item.js-select__item(data-value='1')
+                            | Вариант 1
+                        .select__item.js-select__item(data-value='2')
+                            | Вариант 2
+                        .select__item.js-select__item(data-value='3')
+                            | Вариант 3
+            select.select__input.js-select__value.js-filter-items__select(name='location')
+                option(value='0') 0
+                option(value='1') 1
+                option(value='2') 2
+                option(value='3') 3
+    .filter-items__list
+        .filter-items__item.js-filter-items__item(data-index='0;1') 1
+        .filter-items__item.js-filter-items__item(data-index='0;2') 2
+        .filter-items__item.js-filter-items__item(data-index='0;3') 3

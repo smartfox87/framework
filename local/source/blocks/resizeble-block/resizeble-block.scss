@@ -1,0 +1,74 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+
+.resizeble-block {
+
+}
+
+.resizeble-block__grid {
+	display: flex;
+	height: 200px;
+	overflow: hidden;
+	user-select: none;
+}
+
+.resizeble-block__cell {
+	width: 50%;
+	background-color: red;
+	flex-grow: 1;
+}
+
+.resizeble-block__cell--left {
+	flex-shrink: 0;
+	flex-grow: 0;
+	background-color: blue;
+}
+
+.resizeble-block__toggler-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 0;
+}
+
+.resizeble-block__toggler {
+	flex-shrink: 0;
+	position: relative;
+	width: 30px;
+	height: 30px;
+	filter: drop-shadow(0 0 5px #5d5d5d);
+	background-color: #fff;
+	border-radius: 50%;
+	z-index: 10;
+	cursor: col-resize;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&::before,
+	&::after {
+		content: '';
+		display: block;
+		width: 5px;
+		height: 5px;
+		border-top: 2px solid #5d5d5d;
+		border-left: 2px solid #5d5d5d;
+		transform: rotate(-45deg);
+	}
+
+	&::after {
+		transform: rotate(135deg);
+	}
+
+	&.start {
+		&::before {
+			display: none;
+		}
+	}
+
+	&.end {
+		&::after {
+			display: none;
+		}
+	}
+}

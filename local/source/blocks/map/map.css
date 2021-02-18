@@ -1,0 +1,13 @@
+.map__content {
+  height: 400px;
+  max-height: 60vh;
+}
+
+.map__input {
+  width: 500px;
+  margin-bottom: 10px;
+}
+
+.map__btn {
+  padding: 5px 10px;
+}

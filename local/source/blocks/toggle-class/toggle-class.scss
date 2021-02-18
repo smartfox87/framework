@@ -1,0 +1,13 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+
+.toggle-class {
+  &.active-custom,
+  &.active-class {
+    background-color: red;
+  }
+}
+
+.toggle-class__toggler {
+  cursor: pointer;
+}

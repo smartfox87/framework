@@ -1,0 +1,45 @@
+<h1>map single</h1>
+<div class="map">
+	<div class="map__content  js-map" id="ymaps-single"
+		data-zoom="8"
+		data-coordinates="38.563013, 68.810380"
+		data-title="г. Душанбе, 4-й проезд улицы Айни, 8"></div>
+</div>
+
+<h1>map multy from data attr</h1>
+<div class="map">
+	<div class="map__content  js-map" id="ymaps-multi-attr"
+		data-points='[{"coords": "53.848584, 27.453117", "title": "ул. Космонавтов 34"},{"coords": "53.905005, 27.794971", "title": "ул. Республиканская 10Б"}]'></div>
+</div>
+
+<h1>map multi default content from remote json file</h1>
+<div class="map">
+	<div class="map__content  js-map" id="ymaps-multi-default" data-json-path="ajax/data3.json"></div>
+</div>
+
+<h1>map multi custom content from remote json file</h1>
+<div class="map">
+	<button class="map__btn  btn  js-map-fullscreen" type="button">Full Screen</button>
+	<div class="map__content  js-map" id="ymaps-multi-custom" data-json-path="ajax/data.json"></div>
+</div>
+
+<h1>map and input</h1>
+<div class="map">
+	<input class="map__input" type="text" id="location-input">
+	<button class="map__btn" type="button" id="btn-search">Search</button>
+	<div class="map__error" id="notice"></div>
+	<div class="map__content  js-map" id="ymaps-with-input"></div>
+</div>
+
+<h1>map get country and city</h1>
+<div class="map">
+	<input class="map__input" type="text" id="get-country">
+	<input class="map__input" type="text" id="get-city">
+	<div class="map__content  js-map" id="ymaps-country-city"></div>
+</div>
+
+<h1>ближайшая метка к указанной точке на карте</h1>
+<div class="map">
+	<div class="map__content  js-map" id="ymaps-near-point" data-json-path="ajax/data3.json"></div>
+</div>
+

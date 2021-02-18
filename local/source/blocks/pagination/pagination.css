@@ -1,0 +1,129 @@
+.pagination__top {
+  margin-bottom: 20px;
+}
+
+.pagination__mid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.pagination__more {
+  color: blue;
+  width: 100%;
+}
+
+.pagination__more,
+.pagination__link {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  vertical-align: top;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+  transition-duration: 300ms;
+  border: 1px solid #ccd1d6;
+  background-color: transparent;
+  color: rgba(1, 26, 51, 0.65);
+  padding: 10px 11px;
+}
+.pagination__more:hover, .pagination__more:focus,
+.pagination__link:hover,
+.pagination__link:focus {
+  outline: 0;
+  text-decoration: none;
+}
+.pagination__more:not(:disabled),
+.pagination__link:not(:disabled) {
+  cursor: pointer;
+}
+.pagination__more:disabled,
+.pagination__link:disabled {
+  opacity: 0.3;
+}
+
+.pagination__link {
+  min-width: 42px;
+}
+.pagination__link:not(:last-child) {
+  margin-right: 6px;
+}
+.pagination__link.pagination__link--active.pagination__link--active {
+  background-color: blue;
+  border-color: blue;
+  color: #fff;
+  cursor: default;
+}
+
+.pagination__link--nav-prev::after,
+.pagination__link--nav-next::after {
+  content: '';
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-top: 1.5px solid;
+  border-left: 1.5px solid;
+  transform: rotate(-45deg);
+}
+
+.pagination__link--nav-next::after {
+  transform: rotate(135deg);
+}
+
+.pagination__count {
+  display: inline-flex;
+  align-items: center;
+}
+
+.pagination__count-caption {
+  margin-right: 12px;
+}
+
+.pagination__pages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pagination__pages .btn--border {
+  color: #000;
+}
+
+span.pagination__link.pagination__link.pagination__link:hover,
+span.pagination__link.pagination__link.pagination__link {
+  cursor: default;
+  border-color: #ccd1d6;
+  color: #000;
+}
+
+.pagination .pagination__more:hover,
+.pagination .pagination__link:not(.pagination__link--active):hover {
+  border-color: #ccd1d6;
+  background-color: #ccd1d6;
+}
+
+@media (max-width: 600px) {
+  .pagination__mid {
+    justify-content: center;
+  }
+
+  .pagination__pages {
+    width: 100%;
+    order: -10;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .pagination__link.pagination__link {
+    font-size: 13px;
+    padding: 7px 8px;
+    min-width: 36px;
+  }
+}

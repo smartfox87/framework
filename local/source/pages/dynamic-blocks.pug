@@ -1,0 +1,54 @@
+doctype html
+html(lang='ru')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        meta(http-equiv='X-UA-Compatible' content='ie=edge')
+        title dynamic-blocks
+        link(rel='stylesheet' href='css/style.css')
+    body
+        .main-container
+            include ../blocks/flex-menu/flex-menu
+        .main-container
+            include ../blocks/menu-w-scroll/menu-w-scroll
+        .main-container
+            div(style='width: 320px;position:relative;z-index: 10;')
+                include ../blocks/hamburger-menu/hamburger-menu
+        .main-container
+            include ../blocks/toggle-class-page/toggle-class-page
+        .main-container
+            include ../blocks/dropdown/dropdown
+        .main-container
+            include ../blocks/animate-scroll/animate-scroll
+        .main-container
+            include ../blocks/toggle-class/toggle-class
+        .main-container
+            include ../blocks/fade-block/fade-block
+        .main-container(style='position: static;')
+            include ../blocks/fixed-block/fixed-block
+        .main-container
+            include ../blocks/accordion/accordion
+        .main-container
+            include ../blocks/collapsible-menu/collapsible-menu
+        .main-container
+            include ../blocks/tabs/tabs
+        .main-container
+            include ../blocks/clipped-text/clipped-text
+        .main-container
+            include ../blocks/scroll-top/scroll-top
+        .main-container
+            include ../blocks/hover-menu/hover-menu
+        .main-container
+            include ../blocks/tooltip/tooltip
+        .main-container
+            include ../blocks/custom-table/custom-table
+        .main-container
+            include ../blocks/ajax-load/ajax-load
+        .main-container
+            include ../blocks/popups/popups
+        .main-container
+            include ../blocks/catalog/catalog
+        .main-container
+            include ../blocks/sortable-blocks/sortable-blocks
+        .main-container
+            include ../blocks/filter-items/filter-items

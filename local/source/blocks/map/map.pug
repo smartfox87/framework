@@ -1,0 +1,27 @@
+h1 map single
+.map
+    #ymaps-single.map__content.js-map(data-zoom='8' data-coordinates='38.563013, 68.810380' data-title='г. Душанбе, 4-й проезд улицы Айни, 8')
+h1 map multy from data attr
+.map
+    #ymaps-multi-attr.map__content.js-map(data-points='[{"coords": "53.848584, 27.453117", "title": "ул. Космонавтов 34"},{"coords": "53.905005, 27.794971", "title": "ул. Республиканская 10Б"}]')
+h1 map multi default content from remote json file
+.map
+    #ymaps-multi-default.map__content.js-map(data-json-path='ajax/data3.json')
+h1 map multi custom content from remote json file
+.map
+    button.map__btn.btn.js-map-fullscreen(type='button') Full Screen
+    #ymaps-multi-custom.map__content.js-map(data-json-path='ajax/data.json')
+h1 map and input
+.map
+    input#location-input.map__input(type='text')
+    button#btn-search.map__btn(type='button') Search
+    #notice.map__error
+    #ymaps-with-input.map__content.js-map
+h1 map get country and city
+.map
+    input#get-country.map__input(type='text')
+    input#get-city.map__input(type='text')
+    #ymaps-country-city.map__content.js-map
+h1 ближайшая метка к указанной точке на карте
+.map
+    #ymaps-near-point.map__content.js-map(data-json-path='ajax/data3.json')

@@ -1,0 +1,37 @@
+h1 radio
+label.radio
+    input.radio__input(type='radio' name='radio')
+    i.radio__icon
+    span.radio__name Lorem ipsum dolor.
+label.radio
+    input.radio__input(type='radio' name='radio')
+    i.radio__icon
+    span.radio__name Lorem ipsum dolor.
+
+h1 radio toggle class for label
+label.radio.js-radio-class(data-class='radio--active')
+    input.radio__input.js-radio-class__input(type='radio' name='radio2' checked='')
+    i.radio__icon
+    span.radio__name Lorem ipsum dolor.
+label.radio.js-radio-class(data-class='radio--active')
+    input.radio__input.js-radio-class__input(type='radio' name='radio2')
+    i.radio__icon
+    span.radio__name Lorem ipsum dolor.
+
+h1 radio toggle blocks
+.js-radio-block
+    label.radio
+        input.radio__input.js-radio-block__input(type='radio' name='radio3' value='radio3' checked='')
+        i.radio__icon
+        span.radio__name Lorem ipsum dolor.
+    label.radio
+        input.radio__input.js-radio-block__input(type='radio' name='radio3' value='radio4')
+        i.radio__icon
+        span.radio__name Lorem ipsum dolor.
+    .js-radio-block__block(data-value='radio3')
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur atque beatae distinctio facilis
+        | fugiat, laudantium pariatur provident recusandae tempore velit!
+    .js-radio-block__block(data-value='radio4')
+        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi atque consectetur delectus fugiat
+        | illum molestiae nemo nihil nulla quos ratione rem voluptatibus, voluptatum? Perspiciatis saepe tempora unde. Alias, aliquam animi assumenda beatae,
+        | corporis deserunt eaque ipsum quis saepe, soluta voluptates.

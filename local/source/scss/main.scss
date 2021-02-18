@@ -1,0 +1,168 @@
+/* --- reset --- */
+body.ios {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  border: none;
+}
+
+input[type=text],
+input[type=number],
+input[type=search],
+textarea {
+  appearance: none;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+button {
+  border: none;
+  background: transparent;
+  border-radius: 0;
+  outline: none;
+}
+
+ul, ol, li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+figure, figcaption {
+  padding: 0;
+  margin: 0;
+}
+
+a, label, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  border: none;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+  font-family: $font-family--1;
+  color: $color-black;
+  background: #ffffff;
+  font-size: 16px;
+  line-height: 1.25;
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-variant-east-asian: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+.flc:first-child,
+.fc:first-child,
+.fcc,
+.fcc.fcc {
+  margin-top: 0;
+}
+
+.flc:last-child,
+.lc:last-child,
+.lcc,
+.lcc.lcc {
+  margin-bottom: 0;
+}
+
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.page-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 15;
+}
+
+.main-container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  min-width: $md-min;
+  max-width: $lg-max;
+  padding-left: $lg-padding;
+  padding-right: $lg-padding;
+}
+
+@media (min-width: $lg-min) {
+  .hidden-lg {
+    display: none;
+  }
+}
+
+@media (min-width: $md-min) and (max-width: $md-max) {
+  .hidden-md {
+    display: none;
+  }
+}
+
+@media (min-width: $sm-min) and (max-width: $sm-max) {
+  .hidden-sm {
+    display: none;
+  }
+}
+
+@media (max-width: $sm-max) {
+  .main-container {
+    min-width: $sm-min;
+    max-width: $sm-max;
+    padding-left: $sm-padding;
+    padding-right: $sm-padding;
+  }
+}
+
+@media (max-width: $xs-max) {
+  .hidden-xs {
+    display: none;
+  }
+  .main-container {
+    min-width: $xs-min;
+    max-width: $xs-max;
+    padding-left: $xs-padding;
+    padding-right: $xs-padding;
+  }
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto"), local("Roboto-Regular"), local("Roboto Regular"),
+  url("../fonts/Roboto-Regular.woff2") format("woff2"),
+  url("../fonts/Roboto-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto"), local("Roboto-Bold"), local("Roboto Bold"),
+  url("../fonts/Roboto-Bold.woff2") format("woff2"),
+  url("../fonts/Roboto-Bold.woff") format("woff");
+}

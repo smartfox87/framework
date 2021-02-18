@@ -1,0 +1,23 @@
+.pagination
+    .pagination__top
+        button.pagination__more(type='button') Показать еще
+    .pagination__mid
+        .pagination__count
+            span.pagination__count-caption Показывать по:
+            .pagination__count-dropdown.dropdown.dropdown--select.js-dropdown
+                .dropdown__toggler.dropdown__toggler--arrow.js-dropdown__toggler
+                    | 24
+                    i
+                .dropdown__content.js-dropdown__content
+                    .select__list
+                        a.select__item(href='#') 36
+                        a.select__item(href='#') 48
+                        a.select__item(href='#') 60
+        .pagination__pages
+            a.pagination__link.pagination__link--nav-prev(href='#')
+            a.pagination__link.pagination__link--active(href='#') 1
+            a.pagination__link(href='#') 2
+            a.pagination__link(href='#') 3
+            span.pagination__link ...
+            a.pagination__link(href='#') 12
+            a.pagination__link.pagination__link--nav-next(href='#')

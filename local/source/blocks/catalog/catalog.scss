@@ -1,0 +1,32 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+
+.catalog {
+
+}
+
+.catalog__grid {
+	margin: -10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.catalog__cell {
+	margin: 10px;
+	width: 270px;
+	max-width: 450px;
+	flex: 1 1 auto;
+	height: 100px;
+	background-color: #5d5d5d;
+}
+
+.catalog__cell--empty {
+	margin-top: 0;
+	margin-bottom: 0;
+	height: 0;
+	box-shadow: none;
+	border: none;
+	outline: none;
+	filter: none;
+}

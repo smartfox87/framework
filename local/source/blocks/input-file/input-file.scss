@@ -1,0 +1,64 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+
+.input-file {
+	padding: 14px 16px;
+	display: inline-flex;
+	align-items: center;
+	border: 1px dashed #d1d8de;
+	box-sizing: border-box;
+	border-radius: 6px;
+	cursor: pointer;
+
+	&.selected-file {
+		.input-file__text {
+			display: none;
+		}
+
+		.input-file__name {
+			display: inline-flex;
+		}
+
+		.input-file__delete {
+			display: inline-flex;
+		}
+	}
+}
+
+.input-file__label {
+	display: inline-flex;
+	align-items: center;
+	margin-right: 4px;
+
+	svg {
+		margin-right: 11px;
+	}
+}
+
+.input-file__input {
+	display: none;
+}
+
+.input-file__name {
+	display: none;
+}
+
+.input-file__delete {
+	@include icon-close(10px, 1px, currentColor);
+	color: #b3bac2;
+	display: none;
+	width: 15px;
+	height: 15px;
+	position: relative;
+	z-index: 10;
+}
+
+.no-touch {
+	.input-file:hover {
+		border-color: #4d4d4d;
+	}
+
+	.input-file__delete:hover {
+		color: #4d4d4d;
+	}
+}

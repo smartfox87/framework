@@ -1,0 +1,26 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+
+.collapsible-menu {
+  .open-accordion {
+    .collapsible-menu__toggler {
+      display: none;
+    }
+  }
+}
+
+.collapsible-menu__item {
+  display: block;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.collapsible-menu__toggler {
+  cursor: pointer;
+  transition-duration: 400ms;
+  &:hover {
+    opacity: 0.8;
+  }
+}

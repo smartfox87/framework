@@ -1,0 +1,78 @@
+.input-file {
+  padding: 14px 16px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px dashed #d1d8de;
+  box-sizing: border-box;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.input-file.selected-file .input-file__text {
+  display: none;
+}
+.input-file.selected-file .input-file__name {
+  display: inline-flex;
+}
+.input-file.selected-file .input-file__delete {
+  display: inline-flex;
+}
+
+.input-file__label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 4px;
+}
+.input-file__label svg {
+  margin-right: 11px;
+}
+
+.input-file__input {
+  display: none;
+}
+
+.input-file__name {
+  display: none;
+}
+
+.input-file__delete {
+  cursor: pointer;
+  color: #b3bac2;
+  display: none;
+  width: 15px;
+  height: 15px;
+  position: relative;
+  z-index: 10;
+}
+.input-file__delete::before {
+  width: 10px;
+  height: 1px;
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+.input-file__delete::after {
+  width: 10px;
+  height: 1px;
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+.input-file__delete::before, .input-file__delete::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: currentColor;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.input-file__delete::after {
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+
+.no-touch .input-file:hover {
+  border-color: #4d4d4d;
+}
+.no-touch .input-file__delete:hover {
+  color: #4d4d4d;
+}

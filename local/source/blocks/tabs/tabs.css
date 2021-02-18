@@ -1,0 +1,31 @@
+.tabs.init-tabs .tabs__content {
+  position: static;
+  visibility: visible;
+}
+
+.tabs__navigation {
+  display: flex;
+}
+
+.tabs__toggler {
+  padding: 10px;
+  outline: 1px solid blue;
+  cursor: pointer;
+  transition-duration: 400ms;
+}
+.tabs__toggler.active-tab {
+  background-color: red;
+}
+
+.tabs__content {
+  position: absolute;
+  padding: 10px;
+  width: 100%;
+  left: 0;
+  visibility: hidden;
+  display: flex;
+}
+.tabs__content.active-tab {
+  position: static;
+  visibility: visible;
+}

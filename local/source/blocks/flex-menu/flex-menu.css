@@ -1,0 +1,125 @@
+.flex-menu {
+	overflow: hidden;
+	height: 36px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background-color: #ddd;
+}
+
+.flex-menu li {
+	float: left;
+	margin-right: 40px;
+}
+
+.flex-menu li:last-child {
+	margin-right: 0;
+}
+
+.flexMenu-viewMore a,
+.flex-menu__link {
+	position: relative;
+	display: flex;
+	flex-shrink: 0;
+	align-items: center;
+	padding: 10px 0;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 1.2;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 0.7px;
+	white-space: nowrap;
+}
+
+.flexMenu-viewMore a::after,
+.flex-menu__link::after {
+	content: '';
+	bottom: 5px;
+	display: block;
+	width: 0;
+	height: 2px;
+	background-color: #fff;
+	transition-duration: 300ms;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.flexMenu-popup {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin: 0 0 0 -20px;
+	padding: 10px 20px;
+	list-style: none;
+	background-color: #000;
+	box-shadow: 0 4px 6px rgba(1, 26, 51, 0.16);
+	box-sizing: border-box;
+}
+
+.flexMenu-popup::before {
+	content: '';
+	width: 100%;
+	height: 20px;
+	bottom: 100%;
+	left: 0;
+	position: absolute;
+}
+
+.flexMenu-popup li {
+	margin-right: 0;
+}
+
+.flex-menu--flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.flex-menu--flex .flex-menu__item {
+	width: 150px;
+	flex: 1 0 auto;
+	outline: 1px solid black;
+	display: flex;
+	justify-content: center;
+	margin: 0;
+}
+
+.no-touch .flexMenu-viewMore a:hover,
+.no-touch .flex-menu__link:hover {
+	color: #fff;
+}
+
+.no-touch .flexMenu-viewMore a:hover::after,
+.no-touch .flex-menu__link:hover::after {
+	width: 100%;
+}
+
+@media (max-width: 1024px) {
+	.flex-menu {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		height: auto;
+		padding-top: 20px;
+		overflow: visible;
+	}
+
+	.flex-menu .btn {
+		width: 100%;
+		margin-top: 15px;
+	}
+
+	.flex-menu__item {
+		margin-right: 0;
+	}
+
+	.flex-menu__item--btn {
+		align-self: stretch;
+	}
+
+	.flex-menu__link {
+		color: #000;
+	}
+}

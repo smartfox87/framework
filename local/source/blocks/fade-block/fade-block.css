@@ -1,0 +1,95 @@
+.fade-block {
+	position: relative;
+}
+
+.fade-block__toggler {
+	display: inline-block;
+	cursor: pointer;
+}
+
+.fade-block__toggler--close {
+	position: relative;
+	width: 20px;
+	height: 20px;
+}
+
+.fade-block__toggler--close::before,
+.fade-block__toggler--close::after {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	background-color: currentColor;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.fade-block__toggler--close::after {
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.fade-block__close {
+	cursor: pointer;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+.fade-block__close::before {
+	width: 26px;
+	height: 3px;
+	content: "";
+	display: block;
+	position: absolute;
+	box-sizing: border-box;
+}
+
+.fade-block__close::after {
+	width: 26px;
+	height: 3px;
+	content: "";
+	display: block;
+	position: absolute;
+	box-sizing: border-box;
+}
+
+.fade-block__close::before, .fade-block__close::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: currentColor;
+	transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+.fade-block__close::after {
+	transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+
+.fade-block__content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 10;
+	display: none;
+	box-sizing: border-box;
+	width: 400px;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+	transform: translate(-50%, -50%);
+}
+
+.fade-block--popup .fade-block__content {
+	position: fixed;
+	z-index: 100;
+	max-width: calc(100% - 30px);
+	max-height: calc(100% - 30px);
+}
+
+.fade-block--popup .fade-block__toggler--close {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+}
