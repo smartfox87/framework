@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <symbol fill="none" viewBox="0 0 16 15" id="star" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.83 0l1.796 5.528h5.813l-4.703 3.416 1.796 5.528-4.702-3.416-4.702 3.416 1.796-5.528L.222 5.528h5.812L7.83 0z"
+              fill="currentColor"/>
+    </symbol>
+</svg>

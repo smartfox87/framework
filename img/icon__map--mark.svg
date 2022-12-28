@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="68px" height="94px" viewBox="0 0 68 94" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Landings-Here" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-1114.000000, -383.000000)">
+            <g id="Group" transform="translate(1114.000000, 383.000000)">
+                <path d="M34,0 C52.7776815,0 68,15.2223185 68,34 C68,49.7074039 57.3486246,62.9270458 42.8746813,66.8301182 C40.4653505,68.0194251 38.7788495,69.1306934 37.8151855,70.1628418 C36.6077307,71.4561065 35.3360022,73.9094756 34,77.5229492 C32.9865225,73.9707475 31.7906404,71.5173783 30.4123535,70.1628418 C29.0340667,68.8083052 26.2912281,67.3908248 22.1838379,65.9104004 L22.1838379,65.9104004 L22.2151125,65.9021105 C9.24600587,61.1095308 0,48.6345256 0,34 C0,15.2223185 15.2223185,0 34,0 Z" id="Combined-Shape" fill="#FD0101"></path>
+                <circle id="Oval" fill="#FFFFFF" cx="34" cy="34" r="6"></circle>
+                <circle id="Oval" fill="#FFFFFF" cx="34" cy="88" r="6"></circle>
+                <circle id="Oval" fill="#FD0101" cx="34" cy="88" r="3"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

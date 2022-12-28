@@ -1,0 +1,66 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 0,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          55.831903,
+          37.411961
+        ]
+      },
+      "properties": {
+        "balloonContent": "Содержимое балуна",
+        "clusterCaption": "Метка с iconContent",
+        "hintContent": "Текст подсказки",
+        "iconContent": "12345"
+      },
+      "options": {
+        "iconImageHref": "img/icon__map--full.svg"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          55.71677,
+          37.482338
+        ]
+      },
+      "properties": {
+        "balloonContent": "Я не пропадаю, когда балун открыт",
+        "clusterCaption": "Я не пропадаю, когда балун открыт",
+        "hintContent": "Я не пропадаю, когда балун открыт"
+      },
+      "options": {
+        "iconColor": "#ff0000",
+        "openBalloonOnClick": false,
+        "preset": "islands#redGovernmentCircleIcon",
+        "cursor": "help",
+        "ddddd": "ssssssssss",
+        "hideIconOnBalloonOpen": false
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          55.763338,
+          37.665466
+        ]
+      },
+      "properties": {
+        "balloonContent": "[{\"address\": \"адрес 1\"}, {\"address\": \"адрес 2\"}, {\"address\": \"адрес 3\"}]"
+      },
+      "options": {
+        "iconImageHref": "img/icon__map--full.svg"
+      }
+    }
+  ]
+}
