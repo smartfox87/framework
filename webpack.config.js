@@ -1,16 +1,17 @@
 const glob = require('glob')
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const {ProvidePlugin} = require('webpack');
+const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
 
-let htmlPageNames = ['dynamic-blocks', 'dynamic-form', 'dynamic-media', 'index', 'static'];
-let multipleHtmlPlugins = htmlPageNames.map(name => {
+const htmlPageNames = glob.sync('./local/source/pages/*.pug', {})
+const multipleHtmlPlugins = htmlPageNames.map(name => {
 	return new HtmlWebpackPlugin({
-		template: `./local/source/pages/${name}.pug`, // relative path to the HTML files
-		filename: `${name}.html`, // output HTML files
-		chunks: [`script`]// respective JS files
+		template: name, // relative path to the HTML files
+		filename: name.replace('./local/source/pages/', '').replace(/(pug)$/, 'html'), // output HTML files
+		chunks: [`assets`]// respective JS files
 	})
 });
 
@@ -18,11 +19,7 @@ const PATHS = {
 	src() {
 		const pluginsGlobPath = glob.sync('./local/source/js/plugins/**/*.js', {})
 		const blocksGlobPath = glob.sync('./local/source/blocks/**/*.js', {})
-		const result = ['core-js/stable']
-			.concat(pluginsGlobPath)
-			.concat(blocksGlobPath)
-			.concat(['./local/source/js/script.js', './local/source/scss/style.scss'])
-		return result
+		return [].concat(pluginsGlobPath).concat(blocksGlobPath).concat(['./local/source/js/script.js', './local/source/scss/style.scss'])
 	},
 	dist: '/local/dist'
 }
@@ -32,33 +29,19 @@ module.exports = (env, options) => {
 
 	return {
 		entry: {
-			script: PATHS.src()
+			assets: PATHS.src()
 		},
 		output: {
 			path: __dirname + PATHS.dist,
 			filename: 'js/script.js',
-			environment: {
-				// The environment supports arrow functions ('() => { ... }').
-				arrowFunction: false,
-				// The environment supports BigInt as literal (123n).
-				bigIntLiteral: false,
-				// The environment supports const and let for variable declarations.
-				const: false,
-				// The environment supports destructuring ('{ a, b } = obj').
-				destructuring: false,
-				// The environment supports an async import() function to import EcmaScript modules.
-				dynamicImport: false,
-				// The environment supports 'for of' iteration ('for (const x of array) { ... }').
-				forOf: false,
-				// The environment supports ECMAScript Module syntax to import ECMAScript modules (import ... from '...').
-				module: false,
-			},
 		},
 		devServer: {
-			contentBase: PATHS.dist,
 			compress: true,
-			port: 9000,
-			stats: 'errors-only'
+			port: 8010,
+			hot: true,
+			host: '192.168.31.10',
+			open: true,
+			watchFiles: ['./local/source/**/*']
 		},
 		module: {
 			rules: [
@@ -74,17 +57,9 @@ module.exports = (env, options) => {
 									corejs: {
 										version: 3,
 										proposals: true
-									},
-									targets: [
-										'last 5 versions',
-										'ie >= 11'
-									]
+									}
 								}],
 							],
-							plugins: [
-								['@babel/plugin-proposal-decorators', {decoratorsBeforeExport: true}],
-								['@babel/plugin-proposal-class-properties', {'loose': true}]
-							]
 						}
 					}
 				},
@@ -92,12 +67,7 @@ module.exports = (env, options) => {
 					test: /\.s[ac]ss$/i,
 					use: [
 						// fallback to style-loader in development
-						isDevelopment ? 'style-loader' : {
-							loader: MiniCssExtractPlugin.loader,
-							options: {
-								publicPath: PATHS.dist,
-							},
-						},
+						MiniCssExtractPlugin.loader,
 						// Translates CSS into CommonJS
 						'css-loader',
 						// Compiles Sass to CSS
@@ -117,7 +87,7 @@ module.exports = (env, options) => {
 						options: {
 							name: '[name].[ext]',
 							outputPath: 'fonts',
-							publicPath: PATHS.dist + '/fonts',
+							publicPath: '../fonts',
 						}
 					}
 				},
@@ -128,11 +98,10 @@ module.exports = (env, options) => {
 						options: {
 							name: '[name].[ext]',
 							outputPath: 'img',
-							publicPath: PATHS.dist + '/img',
+							publicPath: '../img',
 						},
 					}
 				},
-				{test: /\.(png|jpe?g|gif|svg)$/, use: ['url-loader?limit=100000']}
 			],
 		},
 		resolve: {
@@ -141,16 +110,27 @@ module.exports = (env, options) => {
 		optimization: {
 			minimize: !isDevelopment,
 		},
+		watch: true,
 		plugins: [
 			new CleanWebpackPlugin(),
+			new ProvidePlugin({
+				$: 'jquery',
+				jQuery: 'jquery',
+				'window.$': 'jquery',
+				'window.jQuery': 'jquery'
+			}),
 			new MiniCssExtractPlugin({
 				// Options similar to the same options in webpackOptions.output
 				// both options are optional
 				filename: 'css/style.css',
 			}),
-			new CopyPlugin([
-				{from: './local/source/img', to: './local/dist/img'},
-			]),
+			new CopyPlugin({
+				patterns: [
+					{from: './local/source/img', to: 'img'},
+					{from: './local/source/ajax', to: 'ajax'},
+				]
+			}),
+			new HtmlWebpackPugPlugin()
 		].concat(multipleHtmlPlugins),
 	}
 };
